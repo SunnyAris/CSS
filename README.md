@@ -75,6 +75,62 @@ p {
 
 `text-align` is a property, and `center` is the property value
 
+## CSS Comments
+
+A CSS comment is placed inside the `<style>` element, and starts with `/*` and ends with `*/`:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* This is a single-line comment */
+p {
+  color: rgb(75, 75, 232);
+} 
+</style>
+</head>
+<body>
+
+<p>This paragraph is styled with CSS.</p>
+<p>CSS comments are not shown in the output.</p>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/c13.png)
 
 
+Comments can be placed wherever you want in the CSS code
+
+```
+p {
+  color: /*red*/blue; 
+}
+```
+## Combination of HTML and CSS comments:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  color: rgb(88, 131, 225); /* Set text color to blue */
+}
+</style>
+</head>
+<body>
+
+<h2>My Heading</h2>
+
+<!-- These paragraphs will be blue -->
+<p>This paragraph is styled with CSS.</p>
+<p>HTML and CSS comments are not shown in the output.</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/c14.png)
 
