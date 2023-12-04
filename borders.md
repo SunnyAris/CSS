@@ -266,6 +266,7 @@ p {
 ```
 
 The same result
+
 ![Alt text](doc-files/b6.png)
 
 ```
