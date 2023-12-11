@@ -110,11 +110,12 @@ p.f {
 <p class="e">Some text.</p>
 <p class="f">Some text.</p>
 
-
-
 </body>
 </html>
 ```
+
+
+
 ![Alt text](doc-files/b2.png)
 
 ```
