@@ -166,3 +166,191 @@ p.small {
 ```
 ![Alt text](doc-files/f5.png)
 
+## `font-size`
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/f6.png)
+
+### Font Size With Em
+
+```
+h1 {
+  font-size: 2.5em; /* 40px/16=2.5em */
+}
+
+h2 {
+  font-size: 1.875em; /* 30px/16=1.875em */
+}
+
+p {
+  font-size: 0.875em; /* 14px/16=0.875em */
+}
+```
+## Responsive Font Size
+
+```
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+<h1 style="font-size:10vw;">Responsive Text</h1>
+
+<p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+
+<p style="font-size:5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
+
+<p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/f7.png)
+
+## CSS Google Fonts
+
+Google Fonts are free to use, and have more than 1000 fonts to choose from.
+https://www.w3schools.com/howto/howto_google_fonts.asp
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Sofia Font</h1>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>123456790</p>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/f8.png)
+
+## Styling Google Fonts
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  text-shadow: 3px 3px 3px #ababab;
+}
+</style>
+</head>
+<body>
+
+<h1>Sofia Font</h1>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>123456790</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/f9.png)
+
+## `effect=effectname`
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple|fire">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1 class="font-effect-fire">Sofia on Fire</h1>
+<h1 class="font-effect-neon">Neon Effect</h1>
+<h1 class="font-effect-outline">Outline Effect</h1>
+<h1 class="font-effect-emboss">Emboss Effect</h1>
+<h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+
+</body>
+</html>
+```
+![Alt text](doc-files/f10.png)
+
+## Font Property
+
+The font property is a shorthand property for:
+
+- font-style
+- font-variant
+- font-weight
+- font-size/line-height
+- font-family
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.a {
+  font: 20px Arial, sans-serif;
+}
+
+p.b {
+  font: italic small-caps bold 12px/30px Georgia, serif;
+}
+</style>
+</head>
+<body>
+
+<h1>The font Property</h1>
+
+<p class="a">This is a paragraph. The font size is set to 20 pixels, and the font family is Arial.</p>
+
+<p class="b">This is a paragraph. The font is set to italic, small-caps and bold, the font size is set to 12 pixels, the line height is set to 30 pixels, and the font family is Georgia.</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/f11.png)
+
+
+
