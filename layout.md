@@ -335,8 +335,282 @@ div.sticky {
 ```
 ![Alt text](doc-files/lp5.png)
 
-##  z-index
+#  z-index
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+</style>
+</head>
+<body>
+
+<h1 style="color:orange;">Heading</h1>
+<img src="doc-files/chibi2.jpg">
+<p style="color:orange;">Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/lp6.png)
 
 
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+}
+
+.red-box {
+  position: relative;
+  border: 2px solid red;
+  height: 100px;
+  margin: 30px;
+}
+
+.orange-box {
+  position: absolute;
+  background: orange;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.yellow-box {
+  position: absolute;
+  background: yellow;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+</style>
+</head>
+<body>
+
+<h1>Overlapping elements</h1>
+
+<p>If two positioned elements overlap each other without a z-index specified,
+the element defined last in the HTML code will be shown on top:</p>
+
+<div class="container">
+  <div class="red-box">red box</div>
+  <div class="orange-box">orange box</div>
+  <div class="yellow-box">yellow box</div>
+</div>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/lp7.png)
 
 
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+}
+
+.red-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid red;
+  height: 100px;
+  margin: 30px;
+}
+
+.orange-box {
+  position: absolute;
+  z-index: 3; /* orange box will be above both red and yellow box */
+  background: orange;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.yellow-box {
+  position: absolute;
+  z-index: 2; /* yellow box will be above black box */
+  background: yellow;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+</style>
+</head>
+<body>
+
+<h1>Z-index Example</h1>
+
+<p>An element with greater stack order is always above an element with a lower stack order.</p>
+
+<div class="container">
+  <div class="red-box">red box (z-index: 1)</div>
+  <div class="orange-box">orange box (z-index: 3)</div>
+  <div class="yellow-box">yellow box (z-index: 2)</div>
+</div>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/lp8.png)
+
+
+# Overflow
+
+Overflow property has the following values:
+
+- visible - Default. The overflow is not clipped. The content renders outside the element's box
+
+- hidden - The overflow is clipped, and the rest of the content will be invisible
+
+- scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+
+- auto - Similar to scroll, but it adds scrollbars only when necessary
+
+
+## overflow: visible
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-color: yellow;
+  width: 200px;
+  height: 65px;
+  border: 1px solid;
+  overflow: visible;
+}
+</style>
+</head>
+<body>
+
+<h2>Overflow: visible</h2>
+
+<p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</p>
+
+<div>To have better control of the layout use overflow. The overflow property specifies what happens if content overflows an element's box.</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/lp11.png)
+
+## overflow: hidden
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-color: yellow;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h2>Overflow: hidden</h2>
+
+<p>With the hidden value, the overflow is clipped, and the rest of the content is hidden:</p>
+
+
+<div>To have better control of the layout use overflow. The overflow property specifies what happens if content overflows an element's box.</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/lp12.png)
+
+## overflow: scroll
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#overflowTest {
+  background: orange;
+  color: white;
+  padding: 15px;
+  width: 50%;
+  height: 100px;
+  overflow: scroll;
+  border: 5px solid yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Overflow</h2>
+
+<p>The overflow property controls what happens to content that is too big to fit into an area.</p>
+
+<div id="overflowTest">This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/lp9.png)
+
+
+## overflow: auto
+
+![Alt text](doc-files/lp10.png)
+
+## overflow-x and overflow-y
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-color: yellow;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+</style>
+</head>
+<body>
+
+<h2>Overflow-x and overflow-y</h2>
+
+
+<p>overflow-x specifies what to do with the left/right edges of the content.</p>
+<p>overflow-y specifies what to do with the top/bottom edges of the content.</p>
+
+<div>Using the overflow property to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/lp13.png)
