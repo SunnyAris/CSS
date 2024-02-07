@@ -41,13 +41,14 @@ a:active {
 
 <h2>Styling a link depending on state</h2>
 
-<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<p><b><a href="https://github.com/SunnyAris" target="_blank">This is a link</a></b></p>
 
 </body>
 </html>
 ```
 
 ![Alt text](doc-files/sl1.png)
+
 
 ## `text-decoration` property is mostly used to remove underlines from links
 
@@ -84,6 +85,7 @@ a:active {
 ```
 
 ![Alt text](doc-files/sl2.png)
+
 
 ## Styling a link with `background-color` property
 
@@ -154,15 +156,16 @@ a.five:hover {text-decoration:underline;}
 
 <h2>Styling Links</h2>
 
-<p><b><a class="one" href="default.asp" target="_blank">This link changes color</a></b></p>
-<p><b><a class="two" href="default.asp" target="_blank">This link changes font-size</a></b></p>
-<p><b><a class="three" href="default.asp" target="_blank">This link changes background-color</a></b></p>
-<p><b><a class="four" href="default.asp" target="_blank">This link changes font-family</a></b></p>
-<p><b><a class="five" href="default.asp" target="_blank">This link changes text-decoration</a></b></p>
+<p><b><a class="one" href="https://github.com/SunnyAris" target="_blank">This link changes color</a></b></p>
+<p><b><a class="two" href="https://github.com/SunnyAris" target="_blank">This link changes font-size</a></b></p>
+<p><b><a class="three" href="https://github.com/SunnyAris" target="_blank">This link changes background-color</a></b></p>
+<p><b><a class="four" href="https://github.com/SunnyAris" target="_blank">This link changes font-family</a></b></p>
+<p><b><a class="five" href="https://github.com/SunnyAris" target="_blank">This link changes text-decoration</a></b></p>
 
 </body>
 </html>
 ```
+![Alt text](doc-files/sl7.png)
 
 ## Link Button
 
@@ -233,7 +236,34 @@ a:hover, a:active {
 
 ![Alt text](doc-files/sl6.png)
 
+## Show the p element
 
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  display: none;
+  background-color: gold;
+  padding: 20px;
+}
+
+div:hover p {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div>Hover over this div element to show the p element
+  <p>Show element</p>
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sl8.png)
 
 ## Cursor 
 
