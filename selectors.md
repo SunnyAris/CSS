@@ -340,3 +340,81 @@ div ~ p {
 </html>
 ```
 ![Alt text](doc-files/sc4.png)
+
+## Match the first `<i>` element in all `<p>` elements
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p i:first-child {
+  color: blue;
+} 
+</style>
+</head>
+<body>
+
+<p>A <i>strong</i> paragraph. 
+A <i>strong</i> paragraph.</p>
+<p>A <i>strong</i> paragraph. A <i>strong</i> paragraph.</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sl9.png)
+
+## Match all `<i>` elements in all first child `<p>` elements
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p:first-child i {
+  color: blue;
+} 
+</style>
+</head>
+<body>
+
+<p>A <i>strong</i> paragraph. 
+A <i>strong</i> paragraph.</p>
+<p>A <i>strong</i> paragraph. A <i>strong</i> paragraph.</p>
+
+<div>
+<p>A <i>strong</i> paragraph. 
+A <i>strong</i> paragraph.</p>
+<p>A <i>strong</i> paragraph. A <i>strong</i> paragraph.</p>
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sl10.png)
+
+##  :lang pseudo-class
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+q:lang(no) {
+  quotes: "~" "~";
+}
+</style>
+</head>
+<body>
+
+<p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+<p>:lang defines the quotation marks for q elements with lang="no":</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sl11.png)
+
+![Alt text](doc-files/sl12.png)
+
+
