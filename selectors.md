@@ -187,3 +187,156 @@ h1, h2, p {
 ```
 
 ![Alt text](doc-files/c9.png)
+
+# Combinators
+
+There are four different combinators in CSS:
+
+- descendant selector (space)
+- child selector (>)
+- adjacent sibling selector (+)
+- general sibling selector (~)
+
+## Descendant Selector
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div p {
+  background-color: gold;
+}
+</style>
+</head>
+<body>
+
+<h2>Descendant selector</h2>
+
+<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+<div>
+  <p>Paragraph in the div.</p>
+  <p>Paragraph in the div.</p>
+  <section><p>Paragraph in the div.</p></section>
+</div>
+
+<p>Paragraph not in a div.</p>
+<p>Paragraph not in a div.</p>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/sc1.png)
+
+## Child Selector
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div > p {
+  background-color: gold;
+}
+</style>
+</head>
+<body>
+
+<h2>Child Selector</h2>
+
+<p>The child selector (>) selects all elements that are the children of a specified element.</p>
+
+<div>
+  <p>Paragraph in the div.</p>
+  <p>Paragraph in the div.</p>
+  <section>
+    <!-- not Child but Descendant -->
+    <p>Paragraph in the div (inside a section element).</p>
+  </section>
+  <p>Paragraph in the div.</p>
+</div>
+
+<p>Paragraph not in a div.</p>
+<p>Paragraph not in a div.</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sc2.png)
+
+## Sibling Selector (+)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div + p {
+  background-color: gold;
+}
+</style>
+</head>
+<body>
+
+<h2>Adjacent Sibling Selector</h2>
+
+<p>The + selector is used to select an element that is directly after another specific element.</p>
+<p>The following example selects the first p element that are placed immediately after div elements:</p>
+
+<div>
+  <p>Paragraph in the div.</p>
+  <p>Paragraph in the div.</p>
+</div>
+
+<p>Paragraph after a div.</p>
+<p>Paragraph after a div.</p>
+
+<div>
+  <p>Paragraph in the div.</p>
+  <p>Paragraph in the div.</p>
+</div>
+
+<p>Paragraph after a div.</p>
+<p>Paragraph after a div.</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sc3.png)
+
+## General Sibling Selector
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div ~ p {
+  background-color: gold;
+}
+</style>
+</head>
+<body>
+
+<h2>General Sibling Selector</h2>
+
+<p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
+
+<p>Paragraph</p>
+
+<div>
+  <p>Paragraph</p>
+</div>
+
+<p>Paragraph</p>
+
+<code>Code.</code>
+
+<p>Paragraph</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sc4.png)

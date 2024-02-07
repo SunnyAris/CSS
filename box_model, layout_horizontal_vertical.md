@@ -274,5 +274,105 @@ img {
 ```
 ![Alt text](doc-files/lh8.png)
 
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+  line-height: 200px;
+  height: 200px;
+  border: 3px solid orange;
+  text-align: center;
+}
+
+.center p {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+
+<h2>Center with line-height</h2>
+
+<p>Line-height property with a value that is equal to the height property to center the div element:</p>
+
+<div class="center">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet....</p>
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/lh9.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center { 
+  height: 200px;
+  position: relative;
+  border: 3px solid orange; 
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+<h2>Center with position and transform</h2>
+
+<p>Positioning and the transform property to vertically and horizontally center the div element:</p>
+
+<div class="center">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/lh10.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid orange; 
+}
+</style>
+</head>
+<body>
+
+<h2>Flexbox centering</h2>
+
+<p>A container with both the justify-content and the align-items properties set to center will align the item(s) in the center (in both axis).</p>
+
+<div class="center">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/lh11.png)
+
+
 
 
