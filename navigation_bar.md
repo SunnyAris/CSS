@@ -329,7 +329,273 @@ li a {
 ```
 ![Alt text](doc-files/nb7.png)
 
+```
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #232559;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #9e86ec;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/nb8.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #9369e2;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #4071e3;
+}
+
+.active {
+  background-color: #0704aa;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/nb9.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #326bdc;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #7595ec;
+}
+
+.active {
+  background-color: #5840ef;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+</ul>
+
+</body>
+</html>
+```
+![Alt text](doc-files/nb10.png)
 
 
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0e346d;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #5296e4;
+}
+
+.active {
+  background-color: #3f5bf5;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div style="padding:20px;margin-top:30px;background-color:#4f9aea;height:2000px;">
+  <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium aenean pharetra magna. Consequat id porta nibh venenatis cras sed. Purus in massa tempor nec. Sed libero enim sed faucibus. Habitant morbi tristique senectus et netus et malesuada fames ac. Felis eget nunc lobortis mattis aliquam faucibus purus. Tellus cras adipiscing enim eu turpis. Sollicitudin nibh sit amet commodo. Cras semper auctor neque vitae.
+
+    Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Etiam erat velit scelerisque in. Porttitor lacus luctus accumsan tortor posuere. Integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Maecenas volutpat blandit aliquam etiam. Bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Neque volutpat ac tincidunt vitae semper. Felis imperdiet proin fermentum leo vel orci porta non. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Est velit egestas dui id ornare arcu odio ut. Gravida arcu ac tortor dignissim convallis aenean et tortor at. Urna id volutpat lacus laoreet non curabitur. Nisl tincidunt eget nullam non nisi est sit amet. Tristique magna sit amet purus. Pulvinar proin gravida hendrerit lectus a. Eu sem integer vitae justo eget magna fermentum. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Massa tempor nec feugiat nisl pretium fusce id velit ut. Facilisis mauris sit amet massa vitae tortor.</h1>
+  
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/nb11.png)
 
 
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0e346d;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #5296e4;
+}
+
+.active {
+  background-color: #3f5bf5;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div style="padding:20px;background-color:#4f9aea;height:2000px;">
+  <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium aenean pharetra magna. Consequat id porta nibh venenatis cras sed. Purus in massa tempor nec. Sed libero enim sed faucibus. Habitant morbi tristique senectus et netus et malesuada fames ac. Felis eget nunc lobortis mattis aliquam faucibus purus. Tellus cras adipiscing enim eu turpis. Sollicitudin nibh sit amet commodo. Cras semper auctor neque vitae.
+
+    Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Etiam erat velit scelerisque in. Porttitor lacus luctus accumsan tortor posuere. Integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Maecenas volutpat blandit aliquam etiam. Bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Neque volutpat ac tincidunt vitae semper. Felis imperdiet proin fermentum leo vel orci porta non. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Est velit egestas dui id ornare arcu odio ut. Gravida arcu ac tortor dignissim convallis aenean et tortor at. Urna id volutpat lacus laoreet non curabitur. Nisl tincidunt eget nullam non nisi est sit amet. Tristique magna sit amet purus. Pulvinar proin gravida hendrerit lectus a. Eu sem integer vitae justo eget magna fermentum. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Massa tempor nec feugiat nisl pretium fusce id velit ut. Facilisis mauris sit amet massa vitae tortor.</h1>
+  
+</div>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/nb12.png)
