@@ -417,4 +417,234 @@ q:lang(no) {
 
 ![Alt text](doc-files/sl12.png)
 
+## [attribute] Selectors
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a[target] {
+  background-color: gold;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute] Selector</h2>
+<p>The links with a target attribute gets a yellow background:</p>
+
+<a href="https://github.com/SunnyAris">github</a>
+<a href="http://www.google.com" target="_blank">google.com</a>
+<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sl13.png)
+
+## [attribute="value"] Selector
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a[target="_blank"] {
+  background-color: gold;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute="value"] Selector</h2>
+<p>The link with target="_blank" gets a yellow background:</p>
+
+<a href="https://github.com/SunnyAris">github</a>
+<a href="http://www.google.com" target="_blank">google.com</a>
+<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/sl14.png)
+
+##  [attribute~="value"] Selector
+
+Selector is used to select elements with an attribute value containing a specified word.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+[title~="chibi"] {
+  border: 5px solid gold;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute~="value"] Selector</h2>
+<p>All images with the title attribute containing the word "chibi" get a yellow border.</p>
+
+<img src="doc-files/chibi.jpg" title="chibi" width="100" height="100">
+<img src="doc-files/chibi.jpg" title="chibi" width="100" height="100">
+<img src="doc-files/chibi.jpg" title="knight" width="100" height="100">
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/sl15.png)
+
+## [attribute|="value"] Selector
+
+Selector is used to select elements with the specified attribute, whose value can be exactly the specified value,
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+[class|="top"] {
+  background: gold;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute|="value"] Selector</h2>
+
+<h1 class="top-header">Welcome</h1>
+<p class="top-text">Welcome</p>
+<p class="topcontent">Welcome</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sl16.png)
+
+## [attribute^="value"] Selector
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+[class^="top"] {
+  background: gold;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute^="value"] Selector</h2>
+
+<h1 class="top-header">Welcome</h1>
+<p class="top-text">Welcome</p>
+<p class="topcontent">Welcome</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sl17.png)
+
+## [attribute$="value"] Selector
+
+`[attribute$="value"]`selects all elements with a class attribute value that ends with "test"
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+[class$="test"] {
+  background: gold;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute$="value"] Selector</h2>
+
+<div class="first_test">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="my-test">The third div element.</div>
+<p class="mytest">Text in a paragraph.</p>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/sl18.png)
+
+## [attribute*="value"] Selector
+
+`[attribute*="value"]`selects all elements with a class attribute value that contains "te"
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+[class*="te"] {
+  background: gold;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute*="value"] Selector</h2>
+
+<div class="first_test">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="my-test">The third div element.</div>
+<p class="mytest">Text in a paragraph.</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sl19.png)
+
+## Styling Forms
+
+Attribute selectors used for styling forms without class or ID
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type="text"] {
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: gold;
+}
+
+input[type="button"] {
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<h2>Styling Forms</h2>
+
+<form name="input" action="" method="get">
+  Firstname:<input type="text" name="Name" value="Sunny" size="20">
+  Lastname:<input type="text" name="Name" value="Aris" size="20">
+  <input type="button" value="Example Button">
+</form>
+
+</body>
+</html>
+```
+![Alt text](doc-files/sl20.png)
+
 
