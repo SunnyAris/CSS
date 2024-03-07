@@ -599,3 +599,251 @@ li a:hover:not(.active) {
 ```
 
 ![Alt text](doc-files/nb12.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color:white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #279cf6;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(65, 137, 245);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(127, 163, 246, 0.988);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(62, 52, 241);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
+
+<h3>Dropdown Menu inside a Navigation Bar</h3>
+
+
+</body>
+</html>
+```
+![Alt text](doc-files/nb13.png)
+
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropbtn {
+  background-color: #2955e9;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #5ea4f0;
+}
+</style>
+</head>
+<body>
+
+<h2>Aligned Dropdown Content</h2>
+
+<div class="dropdown" style="float:left;">
+  <button class="dropbtn">Left</button>
+  <div class="dropdown-content" style="left:0;">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
+
+<div class="dropdown" style="float:right;">
+  <button class="dropbtn">Right</button>
+  <div class="dropdown-content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/nb14.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9fc6f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(12, 26, 129);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<h2>Hoverable Dropdown</h2>
+
+<div class="dropdown">
+  <span>Move mouse over the text. </span>
+  <div class="dropdown-content">
+  <p>Hello World!</p>
+  </div>
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/nb15.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #6795ec;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(58, 85, 238);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Dropdown Image</h2>
+<p>Move the mouse over the image below to open the dropdown content.</p>
+
+<div class="dropdown">
+  <img src="doc-files/cherry_4112230.jpg" alt="Cinque Terre" width="100" height="50">
+  <div class="dropdown-content">
+  <img src="doc-files/cherry_4112230.jpg" alt="Cinque Terre" width="300" height="200">
+  <div class="desc">Beautiful Cherry Tree</div>
+  </div>
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/nb16.png)
+
+lake surface PNG Designed By 588ku from https://pngtree.com/freepng/sky-day-white-clouds-cherry_4112230.html?sol=downref&id=bef
