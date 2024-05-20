@@ -226,4 +226,135 @@ ul li {
 ```
 ![Alt text](doc-files/li4.png)
 
+## Automatic Numbering With Counters
 
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+</style>
+</head>
+<body>
+
+<h1>Using CSS Counters</h1>
+
+<h2>Fantasy</h2>
+<h2>Horror</h2>
+<h2>Thriller</h2>
+<h2>Drama</h2>
+
+</body>
+</html>
+```
+![Alt text](doc-files/li5.png)
+
+## Nesting Counters
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  counter-reset: section;
+}
+
+h1 {
+  counter-reset: subsection;
+}
+
+h1::before {
+  counter-increment: section;
+  content: "Section " counter(section) ". ";
+}
+
+h2::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+}
+</style>
+</head>
+<body>
+
+
+<h1>Books</h1>
+<h2>Fantasy</h2>
+<h2>Horror</h2>
+<h2>Thriller</h2>
+<h2>Drama</h2>
+
+<h1>Books</h1>
+<h2>Fantasy</h2>
+<h2>Horror</h2>
+<h2>Thriller</h2>
+<h2>Drama</h2>
+
+<h1>Books</h1>
+<h2>Fantasy</h2>
+<h2>Horror</h2>
+<h2>Thriller</h2>
+<h2>Drama</h2>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/li6.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: section;
+  content: counters(section,".") " ";
+}
+</style>
+</head>
+<body>
+
+<ol>
+  <li>item</li>
+  <li>item   
+  <ol>
+    <li>item</li>
+    <li>item</li>
+    <li>item
+    <ol>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+    </ol>
+    </li>
+    <li>item</li>
+  </ol>
+  </li>
+  <li>item</li>
+  <li>item</li>
+</ol>
+
+<ol>
+  <li>item</li>
+  <li>item</li>
+</ol>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/li7.png)
