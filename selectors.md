@@ -28,6 +28,147 @@ Selects all `<p>` elements
 
 `element,element,..`	(div, p)	Selects all `<div>` elements and all `<p>` elements
 
+# Priority
+
+There are four categories which define the specificity level of a selector:
+
+- Inline styles - Example: `<h1` `style="color: pink;">`
+- IDs - Example: `#navbar`
+- Classes, pseudo-classes, attribute selectors - Example: `.test`, `:hover`, `[href]`
+- Elements and pseudo-elements - Example: `h1`, `::before`
+
+The text will be green (even though we have specified a red color for the element selector "p"). The class selector is given higher priority:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.test {color: green;} 
+p {color: red;} 
+</style>
+</head>
+<body>
+
+<p class="test">Hello World!</p>
+
+</body>
+</html>
+```
+
+## The text will now be blue
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#demo {color: blue;}
+.test {color: green;} 
+p {color: red;} 
+</style>
+</head>
+<body>
+
+<p id="demo" class="test">Hello World!</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/c27.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {background-color: yellow;}
+h1 {background-color: red;}
+</style>
+</head>
+<body>
+
+<h1>This is heading 1</h1>
+<p>Equal specificity: the latest rule wins - If the same rule is written twice into the external style sheet, then the latest rule wins</p>
+
+</body>
+</html>
+```
+![Alt text](doc-files/c28.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div#a {background-color: green;}
+#a {background-color: yellow;}
+div[id=a] {background-color: blue;}
+</style>
+</head>
+<body>
+
+<div id="a">This is a div</div>
+<p>ID selectors have a higher specificity than attribute selectors</p>
+</body>
+</html>
+```
+![Alt text](doc-files/c29.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.intro {background-color: yellow;}
+h1 {background-color: red;}
+</style>
+</head>
+<body>
+
+<h1 class="intro">This is a heading</h1>
+
+<p>A class selector beats any number of element selectors - a class selector such as .intro beats h1, p, div</p>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/c30.png)
+
+## !important
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myid {
+  background-color: blue;
+}
+
+.myclass {
+  background-color: gray;
+}
+
+p {
+  background-color: red !important;
+}
+</style>
+</head>
+<body>
+
+<p>This is some text in a paragraph.</p>
+
+<p class="myclass">This is some text in a paragraph.</p>
+
+<p id="myid">This is some text in a paragraph.</p>
+
+</body>
+</html>
+```
+
+
 
 ## CSS element selector
 ```

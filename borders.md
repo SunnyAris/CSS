@@ -399,4 +399,52 @@ p.round3 {
 ```
 ![Alt text](doc-files/b9.png)
 
+## The calc() Function
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#div1 {
+  position: absolute;
+  left: 50px;
+  width: calc(100% - 100px);
+  border: 1px solid black;
+  background-color: yellow;
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<h1>The calc() Function</h1>
+
+<p>Create a div that stretches across the window, with a 50px gap between both sides of the div and the edges of the window:</p>
+
+<div id="div1">Some text...</div>
+
+</body>
+</html>
+```
+
+![Alt text](doc-files/b15.png)
+
+## max() Function, min() Function
+
+```
+#div1 {
+  background-color: yellow;
+  height: 100px;
+  width: max(50%, 300px);
+}
+```
+```
+#div1 {
+  background-color: yellow;
+  height: 100px;
+  width: min(50%, 300px);
+}
+```
+
 
