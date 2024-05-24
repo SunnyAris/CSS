@@ -502,3 +502,164 @@ body {
   margin-right: 200px;
 }
 ```
+
+##
+
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("doc-files/cloudb.jpg");
+}
+
+div.ex1 { 
+  background-color: rgb(144, 207, 238);
+  border: 2px solid black;
+  padding: 15px;
+}
+
+div.ex2 { 
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 15px;
+} 
+</style>
+</head>
+<body>
+
+<h2>The transparent keyword</h2>
+
+<div class="ex1">div with blue background.</div>
+<br>
+<div class="ex2">div with a transparent background.</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/b16.png)
+
+
+# `currentcolor` keyword
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  color: cornflowerblue;
+  border: 10px solid currentcolor;
+  padding: 10px;  
+}
+</style>
+</head>
+<body>
+
+<h2>The currentcolor keyword</h2>
+
+<p>The currentcolor keyword refers to the current value of the color property of an element.</p>
+
+<div>
+This div element has a blue text color and a blue border.
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/b17.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  color: cornflowerblue;
+}
+
+div {
+  background-color: currentcolor;
+  padding: 15px;
+}
+
+div p {
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>The currentcolor keyword</h2>
+
+<p>Some text in the body part...</p>
+
+<div>
+<p>Div's background color is set to the current color value of the body element.</p>
+</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/b18.png)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  color: cornflowerblue;
+}
+
+div { 
+  box-shadow: 0px 0px 15px currentcolor;
+  border: 5px solid currentcolor;
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+
+<h2>The currentcolor keyword</h2>
+
+<p>Some text in the body part...</p>
+
+<div>
+<p>Div's border color and shadow color is set to the current color value of the body element.</p>
+</div>
+
+</body>
+</html>
+```
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 5px solid gold;
+}
+
+span {
+  border: inherit;
+}
+</style>
+</head>
+<body>
+
+<h2>The inherit keyword</h2>
+
+<div>Here, the <span>span element's</span> border settings will be inherited from the parent element.</div>
+<br>
+
+<div style="border:5px dotted goldenrod;">Here, the <span>span element's</span> border settings will also be inherited from the parent element.</div>
+
+</body>
+</html>
+```
+![Alt text](doc-files/b19.png)
+
