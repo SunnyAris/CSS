@@ -247,3 +247,68 @@ justify-content and align-items properties to center, and the flex item will be 
   align-items: center;
 }
 ```
+
+## order
+
+```
+<div class="flex-container">
+  <div style="order: 3">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 4">3</div>
+  <div style="order: 1">4</div>
+</div>
+```
+
+##  flex-grow 
+
+the third flex item grow eight times faster
+```
+<div class="flex-container">
+  <div style="flex-grow: 1">1</div>
+  <div style="flex-grow: 1">2</div>
+  <div style="flex-grow: 8">3</div>
+</div>
+```
+
+## flex-shrink
+how much a flex item will shrink
+
+```
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-shrink: 0">3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+</div>
+```
+## flex-basis
+
+```
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-basis: 200px">3</div>
+  <div>4</div>
+</div>
+```
+
+## align-self 
+
+Align the second flex item at the top of the container, and the third flex item at the bottom of the container
+
+```
+<div class="flex-container">
+  <div>1</div>
+  <div style="align-self: flex-start">2</div>
+  <div style="align-self: flex-end">3</div>
+  <div>4</div>
+</div>
+```
+
+
